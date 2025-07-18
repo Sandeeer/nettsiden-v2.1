@@ -94,7 +94,7 @@ nav a:hover { color: #3399ff; }
     font-size: 1.1rem;
     margin: 5px 0;
   }
-  .position {
+  .positionadmin {
     font-size: 0.8rem;
     margin-top: 3px;
     display: inline-block;
@@ -114,7 +114,27 @@ nav a:hover { color: #3399ff; }
     border:1px solid #4d4dff;
     background: rgba(0, 47, 255, 0.1);
   }
+  .positionmod {
+    font-size: 0.8rem;
+    margin-top: 3px;
+    display: inline-block;
+    padding:2px 8px;
+    border-radius:8px;
+    color:#4dff94;
+    border:1px solid #4dff94;
+    background: rgba(0, 255, 110, 0.1);
+  }
 
+  .positionveri {
+    font-size: 0.8rem;
+    margin-top: 3px;
+    display: inline-block;
+    padding:2px 8px;
+    border-radius:8px;
+    color:#f6ff4d;
+    border:1px solid #f6ff4d;
+    background: rgba(221, 255, 0, 0.1);
+  }
 
 /* Regler */
 .rules-text { max-width: 700px; margin: 0 auto 80px; text-align: left; line-height: 1.6; padding: 0 20px; }
