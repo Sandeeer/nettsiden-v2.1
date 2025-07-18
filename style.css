@@ -167,6 +167,128 @@ footer {
 /* Scrollbar */
 #scrollBar { position: fixed; top:0; left:0; width:4px; height:0; background:#3399ff; z-index:99; }
 
-@media screen and (min-width: 200px) and (max-width: 400px) {
-    img { display: none; }
+/* HAMBURGER-KNAPP */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+  margin-left: auto;
+}
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #ccc;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ANIMASJON TIL X */
+nav.mobile-active + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translateY(9px);
+}
+nav.mobile-active + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+nav.mobile-active + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-9px);
+}
+
+/* MOBILMENY */
+nav.mobile-active ul {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: slideIn 0.3s ease-out forwards;
+  z-index: 1000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* GLOW MED PULSERENDE TRAIL RUNDT BOKSEN */
+nav.mobile-active ul::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    270deg,
+    rgba(51,153,255,0) 0%,
+    rgba(51,153,255,0.8) 50%,
+    rgba(51,153,255,0) 100%
+  );
+  background-size: 600% 600%;
+  animation: borderFlowTrail 3s ease-in-out infinite;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  filter: blur(4px) brightness(1.5);
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+@keyframes borderFlowTrail {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* INNGLIDING AV MENY */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+
+/* RESPONSIVT FOR MOBIL */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  nav ul { display: none; }
+
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .hero h1 { font-size: 2.5rem; }
+  .subtitle { font-size: 1.5rem; }
+  .buttons { flex-direction: column; gap: 10px; }
+  .team-grid { grid-template-columns: repeat(1, 1fr); }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 }
