@@ -1,0 +1,148 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0a0a0a;
+  color: #ddd;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Diagonale streker */
+.background-grid {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  background-image: repeating-linear-gradient(
+    -45deg, rgba(51,153,255,0.05) 0, rgba(51,153,255,0.05) 1px, transparent 1px, transparent 20px
+  );
+  z-index: -2;
+}
+
+/* Lommelykt-effekt */
+.spotlight {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  pointer-events: none;
+  background: radial-gradient(circle 150px at 50% 50%, rgba(51,153,255,0.1), transparent 80%);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  position: fixed; top:20px; left:50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border-radius:30px;
+  padding:10px 40px;
+  z-index:999;
+  display: flex; align-items: center; gap:20px;
+}
+.logo img { height: 40px; }
+nav ul { display: flex; list-style: none; gap: 25px; }
+nav a {
+  color: #ccc; text-decoration: none; font-size: 16px; cursor: pointer;
+}
+nav a:hover { color: #3399ff; }
+
+/* Hero */
+.hero { text-align: center; padding: 180px 20px 60px; }
+.hero h1 { font-size: 4.5rem; font-weight: bold; margin-bottom: 10px; color: #3399ff; }
+.subtitle { font-size: 2.5rem; color: #aaa; margin-bottom: 30px; }
+.buttons { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+.btn {
+  padding: 12px 24px; border-radius: 8px;
+  text-decoration: none; font-weight: bold; transition: 0.3s;
+}
+.btn.fivem { background: #3399ff; color: #fff; }
+.btn.fivem:hover { background: #007acc; }
+.btn.discord { border: 2px solid #3399ff; color: #ccc; }
+.btn.discord:hover { background: rgba(51,153,255,0.2); }
+
+/* Om teamet */
+#team-content, #rules-content { display: none; }
+#team-content {
+    padding-top: 190px;
+    text-align: center;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;  /* Mer luft under tittel */
+  }
+.team-description { color: #aaa; margin-bottom: 50px; }
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(160px,1fr));  /* Litt smalere */
+    gap: 20px; /* Mellom boksene */
+    justify-content: center;
+    padding: 0 20px 60px;
+  }
+  .team-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,191,255,0.3);
+  }
+  .team-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+  .team-card h3 {
+    font-size: 1.1rem;
+    margin: 5px 0;
+  }
+  .position {
+    font-size: 0.8rem;
+    margin-top: 3px;
+    display: inline-block;
+    padding:2px 8px;
+    border-radius:8px;
+    color:#ff4d4d;
+    border:1px solid #ff4d4d;
+    background: rgba(255,0,0,0.1);
+  }
+  .positiondev {
+    font-size: 0.8rem;
+    margin-top: 3px;
+    display: inline-block;
+    padding:2px 8px;
+    border-radius:8px;
+    color:#4d6bff;
+    border:1px solid #4d4dff;
+    background: rgba(0, 47, 255, 0.1);
+  }
+
+
+/* Regler */
+.rules-text { max-width: 700px; margin: 0 auto 80px; text-align: left; line-height: 1.6; padding: 0 20px; }
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  position: fixed; bottom: 0; left: 0; width: 100%;
+  font-size: 0.85rem;
+}
+.footer-content {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 20px;
+}
+.socials a { margin-right: 15px; color: #3399ff; text-decoration: none; }
+.socials a:hover { text-decoration: underline; }
+
+/* Blur in animasjon */
+.blur-in { animation: blurFadeIn 1.2s ease forwards; }
+@keyframes blurFadeIn {
+  0% { opacity: 0; filter: blur(10px); }
+  100% { opacity: 1; filter: blur(0); }
+}
+
+/* Fade in for kort */
+.fade-in { opacity: 0; transform: translateY(40px); transition: 1s; }
+.fade-in.active { opacity: 1; transform: translateY(0); }
+
+/* Scrollbar */
+#scrollBar { position: fixed; top:0; left:0; width:4px; height:0; background:#3399ff; z-index:99; }
