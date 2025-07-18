@@ -166,3 +166,7 @@ footer {
 
 /* Scrollbar */
 #scrollBar { position: fixed; top:0; left:0; width:4px; height:0; background:#3399ff; z-index:99; }
+
+@media screen and (min-width: 200px) and (max-width: 400px) {
+    img { display: none; }
+}
