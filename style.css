@@ -74,7 +74,7 @@ nav a:hover { color: #3399ff; }
     padding: 0 20px 60px;
   }
   .team-card {
-    background: #1a1a1a;
+    background: #0d0d0d;
     border-radius: 12px;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
