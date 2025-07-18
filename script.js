@@ -57,3 +57,34 @@ document.addEventListener('mousemove', e => {
 
 // Start
 checkFadeIn();
+
+const hamburger = document.getElementById('hamburger');
+const nav = document.querySelector('nav');
+const navList = nav.querySelector('ul');
+
+hamburger.addEventListener('click', () => {
+  if (nav.classList.contains('mobile-active')) {
+    // Kjør "slideOut"
+    navList.style.animation = 'slideOut 0.3s ease-in forwards';
+    setTimeout(() => {
+      nav.classList.remove('mobile-active');
+      navList.style.animation = ''; // tilbakestill
+    }, 300);
+  } else {
+    nav.classList.add('mobile-active');
+    navList.style.animation = 'slideIn 0.3s ease-out forwards';
+  }
+});
+
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (nav.classList.contains('mobile-active')) {
+      navList.style.animation = 'slideOut 0.3s ease-in forwards';
+      setTimeout(() => {
+        nav.classList.remove('mobile-active');
+        navList.style.animation = '';
+      }, 300);
+    }
+  });
+});
+
