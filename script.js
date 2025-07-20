@@ -31,18 +31,25 @@ document.querySelectorAll('.nav-link').forEach(link => {
     // Vis valgt
     if (target === 'home') {
       document.getElementById('home').style.display = 'block';
-    } else if (target === 'team') {
-      document.getElementById('team-content').style.display = 'block';
-      // Når man viser Om teamet, legg til active på de første 3 boksene
-      const cards = document.querySelectorAll('#team-content .team-card');
-      cards.forEach((card, index) => {
-        if (index < 3) {
-          card.classList.add('active');
-        }
-      });
-    } else if (target === 'rules') {
-      document.getElementById('rules-content').style.display = 'block';
-    }
+    } if (target === 'team') {
+  const team = document.getElementById('team-content');
+  team.style.display = 'block';
+  team.classList.add('section-fade');
+
+  // Trigger animasjonen etter et øyeblikk (for transition skal brukes)
+  setTimeout(() => {
+    team.classList.add('active');
+  }, 50);
+    } if (target === 'rules') {
+  const team = document.getElementById('rules-content');
+  team.style.display = 'block';
+  team.classList.add('section-fade');
+
+  // Trigger animasjonen etter et øyeblikk (for transition skal brukes)
+  setTimeout(() => {
+    team.classList.add('active');
+  }, 50);
+}
 
     // Kjør fade-in sjekk rett etter bytte
     checkFadeIn();
@@ -88,3 +95,10 @@ document.querySelectorAll('nav a').forEach(link => {
   });
 });
 
+if (target === 'home') {
+  document.title = 'SHIFT Rollespill';
+} else if (target === 'team') {
+  document.title = 'Om teamet | SHIFT';
+} else if (target === 'rules') {
+  document.title = 'Regler | SHIFT';
+}
