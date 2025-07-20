@@ -44,11 +44,11 @@ nav ul { display: flex; list-style: none; gap: 25px; }
 nav a {
   color: #ccc; text-decoration: none; font-size: 16px; cursor: pointer;
 }
-nav a:hover { color: #3399ff; }
+nav a:hover { color: #31A8ED; }
 
 /* Hero */
 .hero { text-align: center; padding: 180px 20px 60px; }
-.hero h1 { font-size: 4.5rem; font-weight: bold; margin-bottom: 10px; color: #3399ff; }
+.hero h1 { font-size: 4.5rem; font-weight: bold; margin-bottom: 10px; color: #31A8ED; }
 .subtitle { font-size: 2.5rem; color: #aaa; margin-bottom: 30px; }
 .buttons { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
 .btn {
@@ -60,9 +60,9 @@ nav a:hover { color: #3399ff; }
   box-shadow: 0 4px 12px rgba(51,153,255,0.3);
 }
 
-.btn.fivem { background: #3399ff; color: #fff; }
+.btn.fivem { background: #31A8ED; color: #fff; }
 .btn.fivem:hover { background: #007acc; }
-.btn.discord { border: 2px solid #3399ff; color: #ccc; }
+.btn.discord { border: 2px solid #31A8ED; color: #ccc; }
 .btn.discord:hover { background: rgba(51,153,255,0.2); }
 
 /* Om teamet */
@@ -122,7 +122,7 @@ nav a:hover { color: #3399ff; }
     display: inline-block;
     padding:2px 8px;
     border-radius:8px;
-    color:#4d6bff;
+    color:#4db8ff;
     border:1px solid #4d4dff;
     background: rgba(0, 47, 255, 0.1);
   }
@@ -132,9 +132,9 @@ nav a:hover { color: #3399ff; }
     display: inline-block;
     padding:2px 8px;
     border-radius:8px;
-    color:#4dff94;
-    border:1px solid #4dff94;
-    background: rgba(0, 255, 110, 0.1);
+    color:#f6ff4d;
+    border:1px solid #f6ff4d;
+    background: rgba(221, 255, 0, 0.1);
   }
 
   .positionveri {
@@ -143,9 +143,9 @@ nav a:hover { color: #3399ff; }
     display: inline-block;
     padding:2px 8px;
     border-radius:8px;
-    color:#f6ff4d;
-    border:1px solid #f6ff4d;
-    background: rgba(221, 255, 0, 0.1);
+    color:#4dff94;
+    border:1px solid #4dff94;
+    background: rgba(0, 255, 110, 0.1);
   }
   .section-fade {
   opacity: 0;
@@ -173,7 +173,7 @@ footer {
   display: flex; justify-content: space-between; align-items: center;
   padding: 8px 20px;
 }
-.socials a { margin-right: 15px; color: #3399ff; text-decoration: none; }
+.socials a { margin-right: 15px; color: #31A8ED; text-decoration: none; }
 .socials a:hover { text-decoration: underline; }
 
 /* Blur in animasjon */
@@ -188,7 +188,7 @@ footer {
 .fade-in.active { opacity: 1; transform: translateY(0); }
 
 /* Scrollbar */
-#scrollBar { position: fixed; top:0; left:0; width:4px; height:0; background:#3399ff; z-index:99; }
+#scrollBar { position: fixed; top:0; left:0; width:4px; height:0; background:#31A8ED; z-index:99; }
 
 /* HAMBURGER-KNAPP */
 .hamburger {
@@ -246,7 +246,7 @@ nav.mobile-active ul::before {
   background: linear-gradient(
     270deg,
     rgba(51,153,255,0) 0%,
-    rgba(51,153,255,0.8) 50%,
+    rgba(49,168,237,0.8) 50%,
     rgba(51,153,255,0) 100%
   );
   background-size: 600% 600%;
