@@ -74,6 +74,7 @@ nav a:hover { color: #31A8ED; }
   .section-title {
     font-size: 2rem;
     margin-bottom: 20px;  /* Mer luft under tittel */
+    color: #31A8ED
   }
 .team-description { color: #aaa; margin-bottom: 50px; }
 .team-grid {
@@ -112,8 +113,8 @@ nav a:hover { color: #31A8ED; }
     display: inline-block;
     padding:2px 8px;
     border-radius:8px;
-    color:#ff4d4d;
-    border:1px solid #ff4d4d;
+    color:#f1c20e;
+    border:1px solid #f1c20e;
     background: rgba(255,0,0,0.1);
   }
   .positiondev {
@@ -122,8 +123,8 @@ nav a:hover { color: #31A8ED; }
     display: inline-block;
     padding:2px 8px;
     border-radius:8px;
-    color:#4db8ff;
-    border:1px solid #4d4dff;
+    color:#31A8ED;
+    border:1px solid #31A8ED;
     background: rgba(0, 47, 255, 0.1);
   }
   .positionmod {
@@ -132,8 +133,8 @@ nav a:hover { color: #31A8ED; }
     display: inline-block;
     padding:2px 8px;
     border-radius:8px;
-    color:#f6ff4d;
-    border:1px solid #f6ff4d;
+    color:#da4d3e;
+    border:1px solid #da4d3e;
     background: rgba(221, 255, 0, 0.1);
   }
 
