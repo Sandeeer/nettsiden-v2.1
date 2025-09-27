@@ -70,12 +70,10 @@ nav a:hover { color: #31A8ED; }
 #team-content {
     padding-top: 190px;
     text-align: center;
-      display: flex;
-  flex-wrap: wrap;       /* gjør at de hopper ned på ny rad */
   justify-content: center; 
   gap: 20px;            
   max-width: 1200px;     
-  margin: 0 auto;        
+  margin: 0 auto;         
   }
   .section-title {
     font-size: 2rem;
@@ -325,6 +323,7 @@ nav.mobile-active ul::before {
     gap: 10px;
   }
 }
+
 
 
 
