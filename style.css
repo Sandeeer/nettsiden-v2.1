@@ -315,6 +315,7 @@ nav.mobile-active ul::before {
   }
 
   .hero h1 { font-size: 2rem; }
+  .hero { padding: 300px 20px 40px; }
   .subtitle { font-size: 1.2rem; }
   .buttons { flex-direction: column; gap: 10px;}
   .team-grid { grid-template-columns: repeat(1, 1fr); }
@@ -324,3 +325,4 @@ nav.mobile-active ul::before {
     gap: 10px;
   }
 }
+
